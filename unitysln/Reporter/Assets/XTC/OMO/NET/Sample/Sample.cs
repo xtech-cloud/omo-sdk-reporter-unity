@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using OMO.SDK.NET;
+using XTC.OMO.NET;
 
 public class Sample : MonoBehaviour
 {

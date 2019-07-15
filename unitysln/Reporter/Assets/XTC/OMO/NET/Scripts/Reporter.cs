@@ -6,7 +6,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 
-namespace OMO.SDK.NET
+namespace XTC.OMO.NET
 {
     public class Reporter
     {

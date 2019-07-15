@@ -86,7 +86,7 @@ public class Sample : MonoBehaviour
         }
     }
 
-    void OnReply(byte[] _data)
+    void OnReply(byte[] _data, string _ip, int _port)
     {
         string reply = System.Text.Encoding.UTF8.GetString(_data);
         addLog(reply);

@@ -10,7 +10,7 @@ namespace XTC.OMO.NET
 {
     public class Reporter
     {
-        public delegate void OnReplyDelegate(byte[] _reply);
+        public delegate void OnReplyDelegate(byte[] _reply, string _address, int _port);
         public delegate void OnExceptionDelegate(System.Exception _ex);
 
         public OnReplyDelegate onReply;
@@ -75,7 +75,7 @@ namespace XTC.OMO.NET
                     byte[] buf = udpClient.Receive(ref sender);
                     if (null == buf)
                         continue;
-                    if (null != onReply) onReply(buf);
+                    if (null != onReply) onReply(buf, sender.Address.ToString(), sender.Port);
                 }
                 catch (System.Exception ex)
                 {
